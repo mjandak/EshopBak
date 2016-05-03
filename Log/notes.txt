@@ -1,0 +1,7 @@
+﻿[aspnet_Users].[LastUpdatedDate] je o 2 hodiny pozdeji
+novy uzivatel se vytvori pri zobrazeni prazneho kosiku
+[aspnet_Users].[LastUpdatedDate] se aktualizuje jen pri navsteve kosiku a pridani do  kosiku
+
+Tento e-mail je již používán. Umístit vedle pole pro mail
+
+kontrola jestli zadany mail je mail

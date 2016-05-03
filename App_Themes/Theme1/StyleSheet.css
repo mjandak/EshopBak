@@ -1,0 +1,85 @@
+﻿body
+{
+    font-family: Verdana, Sans-Serif;
+    font-size: 0.8em;
+    color: black;
+}
+A
+{
+    color: black;
+    text-decoration: none;
+}
+A:hover
+{
+    color: red;
+}
+.CategoriesTable
+{
+  border:solid 1px black;
+  background-color:#eee8aa;
+  width:100%;
+}
+.CategoriesTable .CategoriesTableTitle
+{
+  color:White;
+  background-color:Black;
+  font-weight:bold;
+  text-align:center;
+}
+.GenericTable
+{
+  border-collapse:collapse;
+  background-color:#eee8aa;
+}
+
+.GenericTable TD
+{
+    border:solid 1px black;
+    padding:3px;
+    text-align:left;
+}
+
+.OrdersTable TD
+{
+    border:solid 1px black;
+}
+
+.ShoppingCartTable
+{
+  text-align:left;
+}
+
+
+.ProfileTable TD
+{
+    border:solid 1px black;
+    padding:3px;
+}
+
+.ProfileTable INPUT
+{
+    border:solid 1px black;
+}
+
+.header
+{
+    background-color:#eee8aa;
+    border:solid 1px black;
+}
+
+.footer
+{
+    background-color:#eee8aa;
+    border:solid 1px black;
+}
+
+.xxx
+{
+    border-collapse:collapse;
+    background-color:#eee8aa;
+}
+
+.xxx .xxxx
+{
+  border:solid 1px black;
+}

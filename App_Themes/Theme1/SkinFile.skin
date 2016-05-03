@@ -1,0 +1,32 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:Menu runat="server" MaximumDynamicDisplayLevels="0" StaticDisplayLevels="20">
+<StaticSelectedStyle Font-Bold="True" />
+<StaticHoverStyle ForeColor="Red" />
+<%--<StaticMenuStyle BackColor="PaleGoldenrod" HorizontalPadding="5px" Width="200px" />--%>
+</asp:Menu>
+
+<%--<asp:Login runat="server" BackColor="PaleGoldenrod" BorderStyle="Solid" BorderWidth="1px" BorderColor="Black">
+<TitleTextStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+<TextBoxStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" />
+<LoginButtonStyle BackColor="#FFFBFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" />
+</asp:Login>--%>
+
+<asp:CreateUserWizard runat="server" BackColor="PaleGoldenrod" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" TextBoxStyle-BorderColor="black" TextBoxStyle-BorderStyle="solid" TextBoxStyle-BorderWidth="1px">
+</asp:CreateUserWizard>
+
+<asp:RequiredFieldValidator ForeColor="Red" runat="server" />
+<asp:RangeValidator runat="server" ForeColor="Red" />

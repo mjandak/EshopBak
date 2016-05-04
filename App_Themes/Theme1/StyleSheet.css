@@ -67,6 +67,11 @@ A:hover
     border:solid 1px black;
 }
 
+.header a {
+	text-decoration: underline;
+	font-style: italic;
+}
+
 .footer
 {
     background-color:#eee8aa;

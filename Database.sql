@@ -26,15 +26,6 @@ CREATE TABLE [dbo].[GoodsCategories]
     CONSTRAINT [FK_GoodsCategories_Categories] FOREIGN KEY ([category_id]) REFERENCES [Categories]([id])
 )
 
-CREATE TABLE [dbo].[GoodsCategories]
-(
-	[product_id] INT NOT NULL , 
-    [category_id] INT NOT NULL, 
-    PRIMARY KEY ([category_id], [product_id]), 
-    CONSTRAINT [FK_GoodsCategories_Goods] FOREIGN KEY ([product_id]) REFERENCES [Goods]([id]), 
-    CONSTRAINT [FK_GoodsCategories_Categories] FOREIGN KEY ([category_id]) REFERENCES [Categories]([id])
-)
-
 CREATE TABLE [dbo].[ShoppingCart]
 (
 	[Id]     INT           NOT NULL IDENTITY(1,1) PRIMARY KEY, 

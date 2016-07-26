@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -12,9 +12,9 @@
             <tr>
                 <!--hlavicka-->
                 <td colspan="3" style="height: 100px" align="center" class="header">
-                    <font style="font-size: 25px">Elektronický obchod</font>
+                    <font style="font-size: 25px">ElektronickÃ½ obchod</font>
                     <br />
-                    <%--Bakaláøská práce (2007). Navrhnout a implementovat prototyp zákaznické èásti el. obchodu s využitím ASP.NET 2.0. Využívá Membership a Profiles. Databáze MS SQL.--%>
+                    <%--BakalÃ¡Å™skÃ¡ prÃ¡ce (2007). Navrhnout a implementovat prototyp zÃ¡kaznickÃ© ÄÃ¡sti el. obchodu s vyuÅ¾itÃ­m ASP.NET 2.0. VyuÅ¾Ã­vÃ¡ Membership a Profiles. DatabÃ¡ze MS SQL.--%>
                     <%--<br />--%>
                     Bachelor thesis (2007). Design and implement a prototype of an online shop application using ASP.NET 2.0. Makes use of Membership and Profiles. MS SQL database. <br />
 					<a href="https://github.com/mjandak/EshopBak">Source.</a><br />
@@ -36,15 +36,15 @@
                     <asp:LoginView ID="LoginView1" runat="server">
                         <AnonymousTemplate>
                             <asp:Login ID="Login1" runat="server" DestinationPageUrl='<%# Request.Url.OriginalString %>'
-                                VisibleWhenLoggedIn="False" FailureText="Chybné heslo nebo pøihlašovací jméno" Width="100%">
+                                VisibleWhenLoggedIn="False" FailureText="ChybnÃ© heslo nebo pÅ™ihlaÅ¡ovacÃ­ jmÃ©no" Width="100%">
                                 <LayoutTemplate>
                                     <table class="CategoriesTable">
                                         <tr>
-                                            <td align="center" colspan="2" class="CategoriesTableTitle">Pøihlášení</td>
+                                            <td align="center" colspan="2" class="CategoriesTableTitle">PÅ™ihlÃ¡Å¡enÃ­</td>
                                         </tr>
                                         <tr>
                                             <td align="right">
-                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Pøihlašovací jméno:</asp:Label></td>
+                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">PÅ™ihlaÅ¡ovacÃ­ jmÃ©no:</asp:Label></td>
                                             <td align="right">
                                                 <asp:TextBox ID="UserName" runat="server" Width="100px"></asp:TextBox>
                                             </td>
@@ -69,7 +69,7 @@
                                         </tr>
                                         <tr>
                                             <td align="right" colspan="2">
-                                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Pøihlásit"
+                                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="PÅ™ihlÃ¡sit"
                                                     ValidationGroup="ctl00$ctl00$Login1" />
                                             </td>
                                         </tr>
@@ -79,11 +79,11 @@
                             <table style="border: solid 1px black; background-color: #eee8aa; text-align: center; width: 100%; margin-top: 5px">
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypProductBrowser" runat="server" NavigateUrl="~/CtgrBrowser.aspx">Katalog produktù</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypProductBrowser" runat="server" NavigateUrl="~/CtgrBrowser.aspx">Katalog produktÅ¯</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypCart" runat="server" NavigateUrl="~/Cart.aspx">Košík</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypCart" runat="server" NavigateUrl="~/Cart.aspx">KoÅ¡Ã­k</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -94,7 +94,7 @@
                         <LoggedInTemplate>
                             <table style="background-color: #eee8aa; border: solid 1px black; width: 100%; text-align: center;">
                                 <tr>
-                                    <td>Jste pøihlášen jako:</td>
+                                    <td>Jste pÅ™ihlÃ¡Å¡en jako:</td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -105,23 +105,23 @@
                             <table style="background-color: #eee8aa; border: solid 1px black; width: 100%; text-align: center; margin-top: 5px">
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypProductBrowser" runat="server" NavigateUrl="~/CtgrBrowser.aspx">Katalog produktù</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypProductBrowser" runat="server" NavigateUrl="~/CtgrBrowser.aspx">Katalog produktÅ¯</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypCart" runat="server" NavigateUrl="~/Cart.aspx">Košík</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypCart" runat="server" NavigateUrl="~/Cart.aspx">KoÅ¡Ã­k</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypOrders" runat="server" NavigateUrl="~/NotForAnon/DisplayOrders.aspx">Objednávky</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypOrders" runat="server" NavigateUrl="~/NotForAnon/DisplayOrders.aspx">ObjednÃ¡vky</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="hypProfile" runat="server" NavigateUrl="~/NotForAnon/Profile.aspx">Mùj profil</asp:HyperLink></td>
+                                        <asp:HyperLink ID="hypProfile" runat="server" NavigateUrl="~/NotForAnon/Profile.aspx">MÅ¯j profil</asp:HyperLink></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="Odhlásit" LogoutAction="Redirect" LogoutPageUrl="~/CtgrBrowser.aspx" />
+                                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="OdhlÃ¡sit" LogoutAction="Redirect" LogoutPageUrl="~/CtgrBrowser.aspx" />
                                     </td>
                                 </tr>
                             </table>
@@ -132,7 +132,7 @@
             </tr>
             <tr>
                 <!--paticka-->
-                <td colspan="3" style="height: 100px" align="center" class="footer">2007 Miroslav Jandák</td>
+                <td colspan="3" style="height: 100px" align="center" class="footer">2007 Miroslav JandÃ¡k</td>
             </tr>
         </table>
     </form>

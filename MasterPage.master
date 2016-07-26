@@ -18,7 +18,7 @@
                     <%--<br />--%>
                     Bachelor thesis (2007). Design and implement a prototype of an online shop application using ASP.NET 2.0. Makes use of Membership and Profiles. MS SQL database. <br />
 					<a href="https://github.com/mjandak/EshopBak">Source.</a><br />
-					<a href="http://mjandak-001-site2.dtempurl.com/webforms">ASP.NET MVC port.</a>
+					<a href="http://mjandak-001-site2.dtempurl.com/mvc">ASP.NET MVC port.</a>
                 </td>
             </tr>
             <tr>

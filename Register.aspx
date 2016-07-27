@@ -1,11 +1,11 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" MasterPageFile="~/MasterPage.master" %>
+Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" MasterPageFile="~/MasterPage.master" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" CreateUserButtonText="Odeslat" OnCreatedUser="CreateUserWizard1_CreatedUser" OnCreateUserError="CreateUserWizard1_CreateUserError"
-        DuplicateUserNameErrorMessage="Vaöe uûivatelskÈ jmÈno jiû nÏkdo pouûÌv·.<br/>Zkuste zadat jinÈ."
+        DuplicateUserNameErrorMessage="Va≈°e u≈æivatelsk√© jm√©no ji≈æ nƒõkdo pou≈æ√≠v√°.<br/>Zkuste zadat jin√©."
         RequireEmail="true"
-        DuplicateEmailErrorMessage="Tento e-mail je jiû pouûÌv·n."
-        InvalidPasswordErrorMessage="Heslo musÌ mÌt minim·lnÏ {0} znak˘."
+        DuplicateEmailErrorMessage="Tento e-mail je ji≈æ pou≈æ√≠v√°n."
+        InvalidPasswordErrorMessage="Heslo mus√≠ m√≠t minim√°lnƒõ {0} znak≈Ø."
         LoginCreatedUser="false">
         <WizardSteps>
             <asp:CreateUserWizardStep runat="server">
@@ -13,15 +13,15 @@
                     <table border="0">
                         <tr>
                             <td align="center" colspan="2">
-                                <strong>Registrace novÈho z·kaznÌka</strong></td>
+                                <strong>Registrace nov√©ho z√°kazn√≠ka</strong></td>
                         </tr>
                         <tr>
                             <td align="right">
-                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">P¯ihlaöovacÌ jmÈno:</asp:Label></td>
+                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">P≈ôihla≈°ovac√≠ jm√©no:</asp:Label></td>
                             <td align="left">
                                 <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"
-                                    ErrorMessage="NenÌ vyplnÏno p¯ihlaöovacÌ jmÈno." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Nen√≠ vyplnƒõno p≈ôihla≈°ovac√≠ jm√©no." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -30,7 +30,7 @@
                             <td align="left">
                                 <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password"
-                                    ErrorMessage="NenÌ vyplnÏno heslo." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Nen√≠ vyplnƒõno heslo." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -39,7 +39,7 @@
                             <td align="left">
                                 <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="ConfirmPassword"
-                                    ErrorMessage="Zadejte heslo znovu pro ovÏ¯enÌ."
+                                    ErrorMessage="Zadejte heslo znovu pro ovƒõ≈ôen√≠."
                                     ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
@@ -49,28 +49,28 @@
                             <td align="left">
                                 <asp:TextBox ID="Email" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email"
-                                    ErrorMessage="NenÌ vyplnÏn e-mail." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Nen√≠ vyplnƒõn e-mail." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="2">DoruËovacÌ adresa</td>
+                            <td align="center" colspan="2">Doruƒçovac√≠ adresa</td>
                         </tr>
                         <tr>
                             <td align="right">
-                                <asp:Label ID="FirstNameLabel" runat="server" AssociatedControlID="FirstName">JmÈno:</asp:Label></td>
+                                <asp:Label ID="FirstNameLabel" runat="server" AssociatedControlID="FirstName">Jm√©no:</asp:Label></td>
                             <td align="left">
                                 <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="FirstNameRequired" runat="server" ControlToValidate="FirstName"
-                                    ErrorMessage="NenÌ vyplnÏno jmÈno." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Nen√≠ vyplnƒõno jm√©no." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
                             <td align="right">
-                                <asp:Label ID="LastNameLabel" runat="server" AssociatedControlID="LastName">P¯ÌjmenÌ:</asp:Label></td>
+                                <asp:Label ID="LastNameLabel" runat="server" AssociatedControlID="LastName">P≈ô√≠jmen√≠:</asp:Label></td>
                             <td align="left">
                                 <asp:TextBox ID="LastName" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="LastNameRequired" runat="server" ControlToValidate="LastName"
-                                    ErrorMessage="NenÌ vyplnÏno p¯ÌjmenÌ." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Nen√≠ vyplnƒõno p≈ô√≠jmen√≠." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -79,7 +79,7 @@
                             <td align="left">
                                 <asp:TextBox ID="Street" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="StreetRequired" runat="server" ControlToValidate="Street"
-                                    ErrorMessage="NenÌ vyplnÏna ulice." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
+                                    ErrorMessage="Nen√≠ vyplnƒõna ulice." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
                         </tr>
                         <tr>
                             <td align="right">
@@ -87,20 +87,20 @@
                             <td align="left">
                                 <asp:TextBox ID="City" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="CityRequired" runat="server" ControlToValidate="City"
-                                    ErrorMessage="NenÌ vyplnÏna obec." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
+                                    ErrorMessage="Nen√≠ vyplnƒõna obec." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
                         </tr>
                         <tr>
                             <td align="right">
-                                <asp:Label ID="ZipCodeLabel" runat="server" AssociatedControlID="ZipCode">PS»:</asp:Label></td>
+                                <asp:Label ID="ZipCodeLabel" runat="server" AssociatedControlID="ZipCode">PSƒå:</asp:Label></td>
                             <td align="left">
                                 <asp:TextBox ID="ZipCode" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="ZipCodeRequired" runat="server" ControlToValidate="ZipCode"
-                                    ErrorMessage="NenÌ vyplnÏno PS»." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
+                                    ErrorMessage="Nen√≠ vyplnƒõno PSƒå." ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:RequiredFieldValidator></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
                                 <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password"
-                                    ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="Zadan· hesla se neshodujÌ."
+                                    ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="Zadan√° hesla se neshoduj√≠."
                                     ValidationGroup="CreateUserWizard1" EnableClientScript="False"></asp:CompareValidator>
                             </td>
                         </tr>
@@ -117,10 +117,10 @@
                     <table border="0">
                         <tr>
                             <td align="center" colspan="2">
-                                <strong>Registrace novÈho z·kaznÌka</strong></td>
+                                <strong>Registrace nov√©ho z√°kazn√≠ka</strong></td>
                         </tr>
                         <tr>
-                            <td>Blahop¯ejeme, uspÏönÏ jste se zaregistroval. NynÌ se m˘ûete p¯ihl·sit.</td>
+                            <td>Blahop≈ôejeme, uspƒõ≈°nƒõ jste se zaregistroval. Nyn√≠ se m≈Ø≈æete p≈ôihl√°sit.</td>
                         </tr>
                         <tr>
                             <td align="right" colspan="2">&nbsp;</td>

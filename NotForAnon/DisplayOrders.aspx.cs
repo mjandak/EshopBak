@@ -25,10 +25,10 @@ public partial class DisplayOrders : System.Web.UI.Page
             SqlCommand Querry = new SqlCommand();
             Querry.Parameters.Add("@UserId", SqlDbType.UniqueIdentifier).Value = UserId;
             Querry.CommandText = @"
-            SELECT a.id, a.CreateDate, SUM(ProductPrice*ProductQuantity) AS Total, a.State
-            FROM Orders AS a INNER JOIN OrdersGoods AS b ON a.id = b.OrderId
+            SELECT a.OrderId, a.CreateDate, SUM(ProductPrice*ProductQuantity) AS Total, a.State
+            FROM Orders AS a INNER JOIN OrdersGoods AS b ON a.OrderId = b.OrderId
             WHERE a.UserId = @UserId
-            GROUP BY a.UserId, a.id, a.CreateDate, a.State";
+            GROUP BY a.UserId, a.OrderId, a.CreateDate, a.State";
             Querry.Connection = Connection;
 
             Connection.Open();

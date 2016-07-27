@@ -19,7 +19,8 @@
 		// Code that runs when an unhandled error occurs
 		
 		Exception exc = Server.GetLastError();
-        using (StreamWriter sw = File.AppendText(@"D:\Websites\80327e6b9f\www\Log\Err.log"))
+        
+        using (StreamWriter sw = File.AppendText(Server.MapPath("~/Log/Err.log")))
         {
             sw.WriteLine(DateTime.Now.ToString());
             //sw.WriteLine(exc.Message);

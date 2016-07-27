@@ -51,7 +51,7 @@ public partial class Register : System.Web.UI.Page
       catch (Exception ex)
       {
           Membership.DeleteUser(CreateUserWizard1.UserName, true);
-          Response.Redirect("~/Error.aspx");
+          throw;
       }
     }
 

@@ -42,3 +42,32 @@ CREATE TABLE [dbo].[CartItem] (
     CONSTRAINT [FK_CartItem_ShoppingCart] FOREIGN KEY ([CartId]) REFERENCES [dbo].[ShoppingCart] ([Id])
 );
 
+CREATE TABLE [dbo].[UsersDetails]
+(
+	[UserId] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [FirstName] NVARCHAR(50) NOT NULL, 
+    [LastName] NVARCHAR(50) NOT NULL, 
+    [Street] NVARCHAR(50) NOT NULL, 
+    [City] NVARCHAR(50) NOT NULL, 
+    [ZipCode] NVARCHAR(50) NOT NULL, 
+    CONSTRAINT [FK_UsersDetails_aspnet_Users] FOREIGN KEY ([UserId]) REFERENCES [aspnet_Users]([UserId])
+)
+
+CREATE TABLE [dbo].[Orders]
+(
+	[OrderId] INT NOT NULL PRIMARY KEY, 
+    [UserId] UNIQUEIDENTIFIER NOT NULL, 
+    [CreateDate] DATETIME NOT NULL, 
+    [State] NVARCHAR(13) NOT NULL, 
+    CONSTRAINT [FK_Orders_aspnet_Users] FOREIGN KEY ([UserId]) REFERENCES [aspnet_Users]([UserId])
+)
+
+CREATE TABLE [dbo].[OrdersGoods]
+(
+	[OrderId] INT NOT NULL, 
+    [ProductId] INT NOT NULL, 
+    [ProductTitle] NVARCHAR(50) NOT NULL, 
+    [ProductPrice] DECIMAL(9, 2) NOT NULL, 
+    [ProductQuantity] INT NOT NULL, 
+    CONSTRAINT [FK_OrdersGoods_Orders] FOREIGN KEY ([OrderId]) REFERENCES [Orders]([OrderId])
+)

@@ -55,7 +55,7 @@ CREATE TABLE [dbo].[UsersDetails]
 
 CREATE TABLE [dbo].[Orders]
 (
-	[OrderId] INT NOT NULL PRIMARY KEY, 
+	[OrderId] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
     [UserId] UNIQUEIDENTIFIER NOT NULL, 
     [CreateDate] DATETIME NOT NULL, 
     [State] NVARCHAR(13) NOT NULL, 
@@ -66,8 +66,38 @@ CREATE TABLE [dbo].[OrdersGoods]
 (
 	[OrderId] INT NOT NULL, 
     [ProductId] INT NOT NULL, 
-    [ProductTitle] NVARCHAR(50) NOT NULL, 
     [ProductPrice] DECIMAL(9, 2) NOT NULL, 
     [ProductQuantity] INT NOT NULL, 
     CONSTRAINT [FK_OrdersGoods_Orders] FOREIGN KEY ([OrderId]) REFERENCES [Orders]([OrderId])
 )
+GO
+
+
+CREATE PROCEDURE CreateOrder
+	@UserId uniqueidentifier,
+	@NewOrderId int OUT
+AS
+	INSERT INTO Orders (UserId, CreateDate, State) VALUES (@UserId, GETDATE(), 'zpracovává se')
+	SET @NewOrderId = @@IDENTITY
+GO
+
+CREATE PROC DeleteOrder
+	@OrderId int,
+	@UserId uniqueidentifier,
+	@Result bit OUT
+AS
+BEGIN
+	DECLARE @IsCarriedOut nvarchar(13)
+	SET @IsCarriedOut = (SELECT State FROM Orders WHERE OrderId = @OrderId AND UserId = @UserId)
+	IF (@IsCarriedOut = 'zpracovává se')
+	BEGIN
+		DELETE OrdersGoods WHERE OrderId = @OrderId
+		DELETE Orders WHERE OrderId = @OrderId AND UserId = @UserId
+		SET @Result = 1
+	END
+	ELSE
+	BEGIN
+		SET @Result = 0
+	END
+END
+GO

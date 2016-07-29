@@ -149,6 +149,7 @@ public partial class CreateOrder : System.Web.UI.Page
                     MailMessage message = new MailMessage(from, to, subject, body.ToString());
                     message.IsBodyHtml = true;
                     SmtpClient client = new SmtpClient("mail.mjandak.cz");
+                    client.Credentials = new NetworkCredential("postmaster@mjandak.cz", ConfigurationManager.AppSettings["MailPwd"]);
                     client.Timeout = 10000;
                     client.Send(message);
 

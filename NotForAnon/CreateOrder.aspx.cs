@@ -17,6 +17,7 @@ using System.Xml.Xsl;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Net;
 
 
 public partial class CreateOrder : System.Web.UI.Page
@@ -82,7 +83,7 @@ public partial class CreateOrder : System.Web.UI.Page
                     transaction.Commit();
 
                     string to = Membership.GetUser().Email;
-                    string from = "admin@eshopbak.aspone.cz";
+                    string from = "postmaster@mjandak.cz";
                     string subject = String.Format("Objednávka è. {0}", NewOrderId);
 
                     StringBuilder body = new StringBuilder();
@@ -147,7 +148,7 @@ public partial class CreateOrder : System.Web.UI.Page
 
                     MailMessage message = new MailMessage(from, to, subject, body.ToString());
                     message.IsBodyHtml = true;
-                    SmtpClient client = new SmtpClient("localhost");
+                    SmtpClient client = new SmtpClient("mail.mjandak.cz");
                     client.Timeout = 10000;
                     client.Send(message);
 

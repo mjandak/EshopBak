@@ -30,16 +30,16 @@ public partial class OrderDetails : System.Web.UI.Page
 				Querry.Parameters.Add("@UserId", SqlDbType.UniqueIdentifier).Value = UserId;
 				Querry.Parameters.Add("@OrderId", SqlDbType.Int).Value = OrderId;
 				Querry.CommandText = @"
-					SELECT Orders.id, Orders.UserId, OrdersGoods.ProductId, OrdersGoods.ProductQuantity, OrdersGoods.ProductPrice, Goods.title
+					SELECT Orders.OrderId, Orders.UserId, OrdersGoods.ProductId, OrdersGoods.ProductQuantity, OrdersGoods.ProductPrice, Goods.title
 					FROM Orders AS Orders
-					INNER JOIN OrdersGoods AS OrdersGoods ON Orders.id = OrdersGoods.OrderId
+					INNER JOIN OrdersGoods AS OrdersGoods ON Orders.OrderId = OrdersGoods.OrderId
 					INNER JOIN Goods AS Goods ON OrdersGoods.ProductId = Goods.id
-					WHERE Orders.UserId = @UserId AND Orders.id = @OrderId
+					WHERE Orders.UserId = @UserId AND Orders.OrderId = @OrderId
 
 					SELECT CreateDate, SUM(ProductPrice*ProductQuantity) AS Total, State
 					FROM Orders AS a
-					INNER JOIN OrdersGoods AS b ON a.id = b.OrderId
-					WHERE a.UserId = @UserId AND a.id = @OrderId
+					INNER JOIN OrdersGoods AS b ON a.OrderId = b.OrderId
+					WHERE a.UserId = @UserId AND a.OrderId = @OrderId
 					GROUP BY CreateDate, State";
 				Querry.Connection = Connection;
 

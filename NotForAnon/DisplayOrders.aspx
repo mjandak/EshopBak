@@ -21,7 +21,7 @@
         </HeaderTemplate>
         <ItemTemplate>
         <tr>
-         <td><a href="OrderDetails.aspx?OrderId=<%# DataBinder.Eval(Container.DataItem, "id") %>"><%# DataBinder.Eval(Container.DataItem, "id") %></a></td>
+         <td><a href="OrderDetails.aspx?OrderId=<%# DataBinder.Eval(Container.DataItem, "OrderId") %>"><%# DataBinder.Eval(Container.DataItem, "OrderId") %></a></td>
          <td><%# DataBinder.Eval(Container.DataItem, "CreateDate")%></td>
          <td><%# DataBinder.Eval(Container.DataItem, "Total")%></td>
          <td><%# DataBinder.Eval(Container.DataItem, "State")%></td>
